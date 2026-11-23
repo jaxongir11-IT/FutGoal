@@ -1,0 +1,106 @@
+name: Build FutGoal Android APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: Build Android APK
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Prepare Web Directory (www)
+        run: |
+          mkdir -p www
+          cp -r index.html images manifest.json www/
+
+      - name: Install Dependencies
+        run: |
+          npm install
+          npm install @capacitor/core @capacitor/cli @capacitor/android
+
+      - name: Create Capacitor Config
+        run: |
+          cat << 'EOF' > capacitor.config.json
+          {
+            "appId": "com.futgoal.app",
+            "appName": "FutGoal",
+            "webDir": "www",
+            "server": {
+              "url": "https://futgoal-backend-production.up.railway.app",
+              "cleartext": true
+            },
+            "android": {
+              "allowMixedContent": true
+            }
+          }
+          EOF
+
+      - name: Initialize & Sync Android Project
+        run: |
+          npx cap add android || true
+          npx cap sync android
+
+      - name: Build Android APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Copy & Rename APK
+        run: |
+          cp android/app/build/outputs/apk/debug/app-debug.apk FutGoal.apk
+          ls -la FutGoal.apk
+
+      - name: Upload APK to Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: FutGoal-Android-APK
+          path: FutGoal.apk
+          retention-days: 30
+
+      - name: Create Release & Publish APK
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          tag_name: "v1.0.${{ github.run_number }}"
+          name: "FutGoal Android APK v1.0.${{ github.run_number }}"
+          body: |
+            ## ⚽ FutGoal Rasmiy Mobil Ilovasi (Android APK)
+            
+            Ushbu APK fayli GitHub orqali avtomatik tarzda yaratildi.
+            
+            ### 📲 Qanday o'rnatiladi?
+            1. Quyidagi **Assets** bo'limidan `FutGoal.apk` faylini telefoningizga yuklab oling.
+            2. Faylni ochib, **"O'rnatish" (Install)** tugmasini bosing.
+            3. *Eslatma*: Agar telefonda "Noma'lum manbalardan o'rnatish" so'ralsa, ruxsat bering.
+            
+            ---
+            - 🌐 **Jonli Vebsayt & Server**: https://futgoal-backend-production.up.railway.app
+            - ⚡ **Backend API**: Online (Railway Cloud)
+            - 📦 **Paket ID**: `com.futgoal.app`
+          files: FutGoal.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
