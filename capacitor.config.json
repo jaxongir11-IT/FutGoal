@@ -1,0 +1,12 @@
+{
+  "appId": "com.futgoal.app",
+  "appName": "FutGoal",
+  "webDir": "www",
+  "server": {
+    "url": "https://futgoal-backend-production.up.railway.app",
+    "cleartext": true
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}

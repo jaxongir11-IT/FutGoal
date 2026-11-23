@@ -21,64 +21,46 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          cache: 'gradle'
+
+      - name: Accept Android SDK licenses
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
 
       - name: Set up Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
-      - name: Prepare Web Directory (www)
+      - name: Sync Web Assets
         run: |
           mkdir -p www
           cp -r index.html images manifest.json www/
-
-      - name: Install Dependencies & Capacitor
-        run: |
-          npm install
-          npm install @capacitor/core @capacitor/cli @capacitor/android
-
-      - name: Create Capacitor Config
-        run: |
-          cat << 'EOF' > capacitor.config.json
-          {
-            "appId": "com.futgoal.app",
-            "appName": "FutGoal",
-            "webDir": "www",
-            "server": {
-              "url": "https://futgoal-backend-production.up.railway.app",
-              "cleartext": true
-            },
-            "android": {
-              "allowMixedContent": true
-            }
-          }
-          EOF
-
-      - name: Initialize Capacitor Android Project
-        run: |
-          npx cap add android
+          npm install --no-audit
           npx cap sync android
 
-      - name: Build Android APK with Gradle
+      - name: Build Android APK (Gradle)
         run: |
           cd android
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon
+          ./gradlew assembleDebug --no-daemon --stacktrace
 
-      - name: Copy & Prepare APK for Download
+      - name: Copy & Prepare APK
         run: |
           cp android/app/build/outputs/apk/debug/app-debug.apk FutGoal.apk
-          ls -la FutGoal.apk
+          ls -lh FutGoal.apk
 
-      - name: Upload APK to Artifacts
+      - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: FutGoal-Android-APK
           path: FutGoal.apk
           retention-days: 30
 
-      - name: Create Release & Publish APK
+      - name: Publish to GitHub Releases
         uses: softprops/action-gh-release@v2
+        continue-on-error: true
         if: github.ref == 'refs/heads/main'
         with:
           tag_name: "v1.0.${{ github.run_number }}"
