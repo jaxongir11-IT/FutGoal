@@ -243,7 +243,7 @@
   </div>
 
   <!-- ================= 3-COLUMN FOTMOB LAYOUT ================= -->
-  <div class="max-w-[1440px] w-full mx-auto px-2 sm:px-4 py-3 sm:py-4 pb-20 sm:pb-24 lg:pb-6 flex-1 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5">
+  <div class="max-w-[1440px] w-full mx-auto px-2 sm:px-4 py-3 sm:py-4 pb-20 sm:pb-24 lg:pb-6 flex-1 grid grid-cols-1 md:grid-cols-12 lg:grid-cols-12 gap-4 lg:gap-5">
     
     <!-- ========================================================
          COLUMN 1: LEFT SIDEBAR (LEAGUES & FOLLOWING) - 3 cols
@@ -295,9 +295,9 @@
     </aside>
 
     <!-- ========================================================
-         COLUMN 2: CENTER MAIN FEED (MATCHES & MATCH CENTER) - 6 cols
+         COLUMN 2: CENTER MAIN FEED (MATCHES & MATCH CENTER) - 6-7 cols
          ======================================================== -->
-    <main class="col-span-1 lg:col-span-6 space-y-4">
+    <main class="col-span-1 md:col-span-7 lg:col-span-6 space-y-4">
       
       <!-- VIEW 1: MATCHES CALENDAR FEED -->
       <div id="view-matches" class="space-y-4">
@@ -830,9 +830,9 @@
     </main>
 
     <!-- ========================================================
-         COLUMN 3: RIGHT SIDEBAR (MATCH OF DAY & TOP SCORERS) - 3 cols
+         COLUMN 3: RIGHT SIDEBAR (MATCH OF DAY & TOP SCORERS) - O'NG TOMON
          ======================================================== -->
-    <aside class="hidden lg:block lg:col-span-3 space-y-4">
+    <aside id="rightSidebarWidget" class="hidden md:block md:col-span-5 lg:col-span-3 space-y-4 order-last">
       
       <!-- Spotlight: Match of the Day (FotMob featured widget) -->
       <div class="rounded-xl border border-fotmob-darkBorder bg-fotmob-darkCard p-3.5 space-y-3">
