@@ -210,49 +210,18 @@
             <i class="fa-solid fa-newspaper"></i>
             <span data-i18n="nav_news">Yangiliklar</span>
           </button>
-          <button onclick="openAdminModal()" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600/30 transition flex items-center gap-1.5">
-            <i class="fa-solid fa-plus-circle"></i>
-            <span>CMS Admin</span>
-          </button>
-          <button onclick="openGoogleCloudModal()" class="px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-emerald-950/50 text-emerald-400 border border-emerald-500/40 hover:bg-emerald-900/50 transition flex items-center gap-1.5 cursor-pointer shadow-sm" title="Google Firebase Realtime Database">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 fotmob-live-dot"></span>
-            <i class="fa-brands fa-google text-[11px]"></i>
-            <span class="hidden sm:inline">Google DB: LIVE</span>
-          </button>
         </nav>
       </div>
 
-      <!-- Quick Search Bar -->
-      <div class="flex-1 max-w-md hidden sm:block">
-        <div class="relative">
-          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-fotmob-muted text-xs"></i>
-          <input type="text" id="headerSearchInput" oninput="handleInstantSearch(this.value)" placeholder="Klub, futbolchi, o'yin yoki ligani qidiring..." class="w-full bg-fotmob-darkCard border border-fotmob-darkBorder rounded-xl pl-9 pr-8 py-1.5 text-xs text-white placeholder-fotmob-muted focus:outline-none focus:border-fotmob-green">
-          <kbd class="hidden lg:inline absolute right-2.5 top-1/2 -translate-y-1/2 text-[10px] bg-fotmob-darkBg px-1.5 py-0.5 rounded text-fotmob-muted font-mono border border-fotmob-darkBorder">Ctrl+K</kbd>
-        </div>
-      </div>
-
-      <!-- Mobile Search Toggle Button -->
-      <button onclick="toggleMobileSearch()" class="sm:hidden p-1.5 px-2 rounded-lg bg-fotmob-darkCard border border-fotmob-darkBorder text-fotmob-muted hover:text-white transition" title="Qidiruv">
-        <i class="fa-solid fa-magnifying-glass text-xs"></i>
-      </button>
-
-      <!-- Controls: Audio, Language & Dark Mode -->
+      <!-- Controls: Language -->
       <div class="flex items-center gap-1.5 sm:gap-2.5">
-        <!-- Audio Notification Toggle -->
-        <button id="soundToggleBtn" onclick="toggleAudio()" class="px-2.5 py-1.5 rounded-lg bg-fotmob-darkCard border border-fotmob-darkBorder text-fotmob-muted hover:text-white transition text-xs flex items-center gap-1.5" title="Goal Audio">
-          <i id="soundIcon" class="fa-solid fa-volume-high text-fotmob-green"></i>
-          <span id="soundLabel" class="hidden xl:inline text-[11px] font-medium">Ovoz: ON</span>
-        </button>
-
         <!-- Multi-language Select -->
-        <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-fotmob-darkCard border border-fotmob-darkBorder text-slate-200 text-xs rounded-lg px-2 py-1.5 focus:border-fotmob-green cursor-pointer">
+        <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-fotmob-darkCard border border-fotmob-darkBorder text-slate-200 text-xs rounded-lg px-2.5 py-1.5 focus:border-fotmob-green cursor-pointer">
           <option value="uz">🇺🇿 O'zbek</option>
           <option value="ru">🇷🇺 Русский</option>
           <option value="en">🇬🇧 English</option>
         </select>
-
-        <!-- Theme Toggle -->
-        </div>
+      </div>
 
     </div>
   </header>
@@ -3135,13 +3104,13 @@
       const icon = document.getElementById('soundIcon');
       const label = document.getElementById('soundLabel');
       if (audioEnabled) {
-        icon.className = 'fa-solid fa-volume-high text-fotmob-green';
-        label.textContent = 'Ovoz: ON';
-        showToast('FotMob ovozli signallari yoqildi', 'success');
+        if (icon) icon.className = 'fa-solid fa-volume-high text-fotmob-green';
+        if (label) label.textContent = 'Ovoz: ON';
+        showToast('FutMob ovozli signallari yoqildi', 'success');
         playSound('goal');
       } else {
-        icon.className = 'fa-solid fa-volume-xmark text-fotmob-muted';
-        label.textContent = 'Ovoz: OFF';
+        if (icon) icon.className = 'fa-solid fa-volume-xmark text-fotmob-muted';
+        if (label) label.textContent = 'Ovoz: OFF';
         showToast('Ovozli signallar o\'chirildi', 'info');
       }
     }
@@ -3163,7 +3132,8 @@
       window.addEventListener('keydown', (e) => {
         if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
           e.preventDefault();
-          document.getElementById('headerSearchInput').focus();
+          const s = document.getElementById('headerSearchInput');
+          if (s) s.focus();
         }
       });
     });
