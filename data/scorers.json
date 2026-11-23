@@ -1,0 +1,735 @@
+{
+  "EPL": [
+    {
+      "rank": 1,
+      "name": "Erling Haaland",
+      "club": "Manchester City",
+      "goals": 12,
+      "xg": 11.2,
+      "pens": 1,
+      "assists": 0
+    },
+    {
+      "rank": 2,
+      "name": "Bryan Mbeumo",
+      "club": "Brentford",
+      "goals": 8,
+      "xg": 6.4,
+      "pens": 2,
+      "assists": 1
+    },
+    {
+      "rank": 3,
+      "name": "Chris Wood",
+      "club": "Nottingham Forest",
+      "goals": 8,
+      "xg": 6.1,
+      "pens": 1,
+      "assists": 0
+    },
+    {
+      "rank": 4,
+      "name": "Mohamed Salah",
+      "club": "Liverpool",
+      "goals": 8,
+      "xg": 7.8,
+      "pens": 1,
+      "assists": 6
+    },
+    {
+      "rank": 5,
+      "name": "Cole Palmer",
+      "club": "Chelsea",
+      "goals": 7,
+      "xg": 6.9,
+      "pens": 1,
+      "assists": 5
+    }
+  ],
+  "La Liga": [
+    {
+      "rank": 1,
+      "name": "Robert Lewandowski",
+      "club": "Barcelona",
+      "goals": 14,
+      "xg": 12.8,
+      "pens": 2,
+      "assists": 2
+    },
+    {
+      "rank": 2,
+      "name": "Vinícius Jr",
+      "club": "Real Madrid",
+      "goals": 8,
+      "xg": 6.5,
+      "pens": 2,
+      "assists": 4
+    },
+    {
+      "rank": 3,
+      "name": "Ayoze Pérez",
+      "club": "Villarreal",
+      "goals": 7,
+      "xg": 5.6,
+      "pens": 0,
+      "assists": 0
+    },
+    {
+      "rank": 4,
+      "name": "Raphinha",
+      "club": "Barcelona",
+      "goals": 7,
+      "xg": 6.8,
+      "pens": 0,
+      "assists": 6
+    },
+    {
+      "rank": 5,
+      "name": "Kylian Mbappé",
+      "club": "Real Madrid",
+      "goals": 6,
+      "xg": 7.9,
+      "pens": 3,
+      "assists": 1
+    }
+  ],
+  "Serie A": [
+    {
+      "rank": 1,
+      "name": "Mateo Retegui",
+      "club": "Atalanta",
+      "goals": 11,
+      "xg": 9.8,
+      "pens": 2,
+      "assists": 3
+    },
+    {
+      "rank": 2,
+      "name": "Marcus Thuram",
+      "club": "Inter Milan",
+      "goals": 7,
+      "xg": 6.9,
+      "pens": 0,
+      "assists": 2
+    },
+    {
+      "rank": 3,
+      "name": "Dušan Vlahović",
+      "club": "Juventus",
+      "goals": 6,
+      "xg": 6.4,
+      "pens": 2,
+      "assists": 0
+    },
+    {
+      "rank": 4,
+      "name": "Ademola Lookman",
+      "club": "Atalanta",
+      "goals": 6,
+      "xg": 5.8,
+      "pens": 0,
+      "assists": 4
+    },
+    {
+      "rank": 5,
+      "name": "Khvicha Kvaratskhelia",
+      "club": "Napoli",
+      "goals": 5,
+      "xg": 4.9,
+      "pens": 1,
+      "assists": 2
+    }
+  ],
+  "Bundesliga": [
+    {
+      "rank": 1,
+      "name": "Harry Kane",
+      "club": "Bayern Munich",
+      "goals": 11,
+      "xg": 10.4,
+      "pens": 3,
+      "assists": 5
+    },
+    {
+      "rank": 2,
+      "name": "Omar Marmoush",
+      "club": "Eintracht Frankfurt",
+      "goals": 11,
+      "xg": 8.9,
+      "pens": 2,
+      "assists": 7
+    },
+    {
+      "rank": 3,
+      "name": "Victor Boniface",
+      "club": "Bayer Leverkusen",
+      "goals": 6,
+      "xg": 6.1,
+      "pens": 0,
+      "assists": 1
+    },
+    {
+      "rank": 4,
+      "name": "Serhou Guirassy",
+      "club": "Borussia Dortmund",
+      "goals": 6,
+      "xg": 5.7,
+      "pens": 1,
+      "assists": 1
+    }
+  ],
+  "Ligue 1": [
+    {
+      "rank": 1,
+      "name": "Bradley Barcola",
+      "club": "Paris Saint-Germain",
+      "goals": 10,
+      "xg": 8.7,
+      "pens": 0,
+      "assists": 2
+    },
+    {
+      "rank": 2,
+      "name": "Jonathan David",
+      "club": "Lille",
+      "goals": 7,
+      "xg": 6.9,
+      "pens": 2,
+      "assists": 1
+    },
+    {
+      "rank": 3,
+      "name": "Mason Greenwood",
+      "club": "Marseille",
+      "goals": 6,
+      "xg": 5.4,
+      "pens": 1,
+      "assists": 1
+    }
+  ],
+  "Superliga": [
+    {
+      "rank": 1,
+      "name": "Dragan Cheran",
+      "club": "Paxtakor",
+      "goals": 11,
+      "xg": 10.2,
+      "pens": 3,
+      "assists": 3
+    },
+    {
+      "rank": 2,
+      "name": "Zoran Marushich",
+      "club": "Nasaf",
+      "goals": 11,
+      "xg": 9.8,
+      "pens": 1,
+      "assists": 2
+    },
+    {
+      "rank": 3,
+      "name": "Lyupcho Doriev",
+      "club": "So'g'diyona",
+      "goals": 11,
+      "xg": 9.2,
+      "pens": 3,
+      "assists": 5
+    },
+    {
+      "rank": 4,
+      "name": "Xurshid G'iyosov",
+      "club": "OKMK",
+      "goals": 9,
+      "xg": 7.8,
+      "pens": 2,
+      "assists": 4
+    },
+    {
+      "rank": 5,
+      "name": "Toma Tabatadze",
+      "club": "Navbahor",
+      "goals": 8,
+      "xg": 8.1,
+      "pens": 2,
+      "assists": 1
+    }
+  ],
+  "UCL": [
+    {
+      "rank": 1,
+      "name": "Raphinha",
+      "club": "Barcelona",
+      "goals": 5,
+      "xg": 4.1,
+      "pens": 0,
+      "assists": 3
+    },
+    {
+      "rank": 2,
+      "name": "Harry Kane",
+      "club": "Bayern Munich",
+      "goals": 5,
+      "xg": 4.8,
+      "pens": 3,
+      "assists": 1
+    },
+    {
+      "rank": 3,
+      "name": "Robert Lewandowski",
+      "club": "Barcelona",
+      "goals": 5,
+      "xg": 4.5,
+      "pens": 0,
+      "assists": 0
+    },
+    {
+      "rank": 4,
+      "name": "Viktor Gyökeres",
+      "club": "Sporting CP",
+      "goals": 5,
+      "xg": 4.2,
+      "pens": 2,
+      "assists": 1
+    },
+    {
+      "rank": 5,
+      "name": "Vinícius Jr",
+      "club": "Real Madrid",
+      "goals": 4,
+      "xg": 3.6,
+      "pens": 1,
+      "assists": 2
+    }
+  ],
+  "World Cup": [
+    {
+      "rank": 1,
+      "name": "Mehdi Taremi",
+      "club": "Eron",
+      "goals": 6,
+      "xg": 5.2,
+      "pens": 2,
+      "assists": 4
+    },
+    {
+      "rank": 2,
+      "name": "Eldor Shomurodov",
+      "club": "O'zbekiston",
+      "goals": 5,
+      "xg": 4.7,
+      "pens": 1,
+      "assists": 2
+    },
+    {
+      "rank": 3,
+      "name": "Almoez Ali",
+      "club": "Qatar",
+      "goals": 5,
+      "xg": 4.2,
+      "pens": 1,
+      "assists": 1
+    },
+    {
+      "rank": 4,
+      "name": "Oston O'runov",
+      "club": "O'zbekiston",
+      "goals": 4,
+      "xg": 3.4,
+      "pens": 0,
+      "assists": 2
+    },
+    {
+      "rank": 5,
+      "name": "Lionel Messi",
+      "club": "Argentina",
+      "goals": 6,
+      "xg": 5.8,
+      "pens": 1,
+      "assists": 3
+    }
+  ],
+  "Liga Portugal": [
+    {
+      "rank": 1,
+      "name": "Viktor Gyökeres",
+      "club": "Sporting CP",
+      "goals": 16,
+      "xg": 13.9,
+      "pens": 4,
+      "assists": 1
+    },
+    {
+      "rank": 2,
+      "name": "Wenderson Galeno",
+      "club": "Porto",
+      "goals": 8,
+      "xg": 6.8,
+      "pens": 3,
+      "assists": 2
+    },
+    {
+      "rank": 3,
+      "name": "Samu Omorodion",
+      "club": "Porto",
+      "goals": 8,
+      "xg": 6.2,
+      "pens": 0,
+      "assists": 0
+    },
+    {
+      "rank": 4,
+      "name": "Kerem Aktürkoğlu",
+      "club": "Benfica",
+      "goals": 5,
+      "xg": 4.8,
+      "pens": 0,
+      "assists": 3
+    }
+  ],
+  "Eredivisie": [
+    {
+      "rank": 1,
+      "name": "Sem Steijn",
+      "club": "FC Twente",
+      "goals": 8,
+      "xg": 7.2,
+      "pens": 1,
+      "assists": 2
+    },
+    {
+      "rank": 2,
+      "name": "Luuk de Jong",
+      "club": "PSV Eindhoven",
+      "goals": 8,
+      "xg": 7.9,
+      "pens": 1,
+      "assists": 4
+    },
+    {
+      "rank": 3,
+      "name": "Ricardo Pepi",
+      "club": "PSV Eindhoven",
+      "goals": 6,
+      "xg": 5.4,
+      "pens": 0,
+      "assists": 1
+    }
+  ],
+  "SPL": [
+    {
+      "rank": 1,
+      "name": "Aleksandar Mitrovic",
+      "club": "Al-Hilal",
+      "goals": 11,
+      "xg": 9.8,
+      "pens": 2,
+      "assists": 1
+    },
+    {
+      "rank": 2,
+      "name": "Cristiano Ronaldo",
+      "club": "Al-Nassr",
+      "goals": 11,
+      "xg": 10.4,
+      "pens": 3,
+      "assists": 2
+    },
+    {
+      "rank": 3,
+      "name": "Karim Benzema",
+      "club": "Al-Ittihad",
+      "goals": 8,
+      "xg": 7.6,
+      "pens": 1,
+      "assists": 3
+    },
+    {
+      "rank": 4,
+      "name": "Georges-Kévin Nkoudou",
+      "club": "Damac",
+      "goals": 6,
+      "xg": 5.2,
+      "pens": 2,
+      "assists": 1
+    }
+  ],
+  "Süper Lig": [
+    {
+      "rank": 1,
+      "name": "Ciro Immobile",
+      "club": "Beşiktaş",
+      "goals": 8,
+      "xg": 7.2,
+      "pens": 4,
+      "assists": 0
+    },
+    {
+      "rank": 2,
+      "name": "Victor Osimhen",
+      "club": "Galatasaray",
+      "goals": 8,
+      "xg": 7.8,
+      "pens": 1,
+      "assists": 3
+    },
+    {
+      "rank": 3,
+      "name": "Edin Džeko",
+      "club": "Fenerbahçe",
+      "goals": 7,
+      "xg": 6.9,
+      "pens": 0,
+      "assists": 1
+    }
+  ],
+  "Brasileirão": [
+    {
+      "rank": 1,
+      "name": "Estêvão",
+      "club": "Palmeiras",
+      "goals": 12,
+      "xg": 9.8,
+      "pens": 2,
+      "assists": 8
+    },
+    {
+      "rank": 2,
+      "name": "Pedro",
+      "club": "Flamengo",
+      "goals": 11,
+      "xg": 10.1,
+      "pens": 2,
+      "assists": 5
+    },
+    {
+      "rank": 3,
+      "name": "Yuri Alberto",
+      "club": "Corinthians",
+      "goals": 10,
+      "xg": 8.9,
+      "pens": 1,
+      "assists": 4
+    }
+  ],
+  "Liga Profesional": [
+    {
+      "rank": 1,
+      "name": "Braian Romero",
+      "club": "Vélez Sarsfield",
+      "goals": 12,
+      "xg": 10.4,
+      "pens": 2,
+      "assists": 3
+    },
+    {
+      "rank": 2,
+      "name": "Miguel Borja",
+      "club": "River Plate",
+      "goals": 10,
+      "xg": 9.1,
+      "pens": 1,
+      "assists": 1
+    },
+    {
+      "rank": 3,
+      "name": "Claudio Aquino",
+      "club": "Vélez Sarsfield",
+      "goals": 9,
+      "xg": 7.9,
+      "pens": 3,
+      "assists": 6
+    }
+  ],
+  "MLS": [
+    {
+      "rank": 1,
+      "name": "Christian Benteke",
+      "club": "DC United",
+      "goals": 23,
+      "xg": 21.4,
+      "pens": 3,
+      "assists": 4
+    },
+    {
+      "rank": 2,
+      "name": "Lionel Messi",
+      "club": "Inter Miami",
+      "goals": 20,
+      "xg": 17.8,
+      "pens": 1,
+      "assists": 16
+    },
+    {
+      "rank": 3,
+      "name": "Luis Suárez",
+      "club": "Inter Miami",
+      "goals": 20,
+      "xg": 18.2,
+      "pens": 0,
+      "assists": 9
+    },
+    {
+      "rank": 4,
+      "name": "Denis Bouanga",
+      "club": "LAFC",
+      "goals": 20,
+      "xg": 19.1,
+      "pens": 4,
+      "assists": 11
+    }
+  ],
+  "ACL": [
+    {
+      "rank": 1,
+      "name": "Salem Al-Dawsari",
+      "club": "Al-Hilal",
+      "goals": 6,
+      "xg": 5.2,
+      "pens": 1,
+      "assists": 3
+    },
+    {
+      "rank": 2,
+      "name": "Soufiane Rahimi",
+      "club": "Al-Ain",
+      "goals": 5,
+      "xg": 4.8,
+      "pens": 1,
+      "assists": 2
+    },
+    {
+      "rank": 3,
+      "name": "Riyad Mahrez",
+      "club": "Al-Ahli Saudi",
+      "goals": 4,
+      "xg": 3.9,
+      "pens": 1,
+      "assists": 4
+    },
+    {
+      "rank": 4,
+      "name": "Jasur Yaxshiboyev",
+      "club": "Navbahor",
+      "goals": 4,
+      "xg": 3.6,
+      "pens": 0,
+      "assists": 2
+    }
+  ],
+  "UEL": [
+    {
+      "rank": 1,
+      "name": "Yunus Akgün",
+      "club": "Galatasaray",
+      "goals": 4,
+      "xg": 3.2,
+      "pens": 0,
+      "assists": 1
+    },
+    {
+      "rank": 2,
+      "name": "Samu Omorodion",
+      "club": "Porto",
+      "goals": 4,
+      "xg": 3.8,
+      "pens": 0,
+      "assists": 0
+    },
+    {
+      "rank": 3,
+      "name": "Pedro",
+      "club": "Lazio",
+      "goals": 3,
+      "xg": 2.6,
+      "pens": 0,
+      "assists": 2
+    }
+  ],
+  "Belgian Pro": [
+    {
+      "rank": 1,
+      "name": "Tolu Arokodare",
+      "club": "KRC Genk",
+      "goals": 8,
+      "xg": 7.4,
+      "pens": 1,
+      "assists": 2
+    },
+    {
+      "rank": 2,
+      "name": "Adriano Bertaccini",
+      "club": "Sint-Truiden",
+      "goals": 8,
+      "xg": 6.9,
+      "pens": 0,
+      "assists": 0
+    },
+    {
+      "rank": 3,
+      "name": "Kasper Dolberg",
+      "club": "Anderlecht",
+      "goals": 8,
+      "xg": 7.1,
+      "pens": 2,
+      "assists": 1
+    }
+  ],
+  "Scottish Prem": [
+    {
+      "rank": 1,
+      "name": "Nicolas Kühn",
+      "club": "Celtic",
+      "goals": 8,
+      "xg": 6.8,
+      "pens": 0,
+      "assists": 6
+    },
+    {
+      "rank": 2,
+      "name": "Pape Habib Guèye",
+      "club": "Aberdeen",
+      "goals": 5,
+      "xg": 4.6,
+      "pens": 0,
+      "assists": 1
+    },
+    {
+      "rank": 3,
+      "name": "Callum McGregor",
+      "club": "Celtic",
+      "goals": 5,
+      "xg": 4.1,
+      "pens": 0,
+      "assists": 2
+    }
+  ],
+  "Championship": [
+    {
+      "rank": 1,
+      "name": "Borja Sainz",
+      "club": "Norwich City",
+      "goals": 11,
+      "xg": 9.4,
+      "pens": 1,
+      "assists": 2
+    },
+    {
+      "rank": 2,
+      "name": "Josh Maja",
+      "club": "West Bromwich Albion",
+      "goals": 9,
+      "xg": 8.1,
+      "pens": 2,
+      "assists": 1
+    },
+    {
+      "rank": 3,
+      "name": "Wilson Isidor",
+      "club": "Sunderland",
+      "goals": 5,
+      "xg": 4.8,
+      "pens": 0,
+      "assists": 0
+    }
+  ]
+}

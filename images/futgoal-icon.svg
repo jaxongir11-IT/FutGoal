@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141e2c"/>
+      <stop offset="50%" stop-color="#0e1520"/>
+      <stop offset="100%" stop-color="#080c11"/>
+    </linearGradient>
+
+    <!-- Neon Green/Cyan Gradient -->
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFA3"/>
+      <stop offset="50%" stop-color="#00D26A"/>
+      <stop offset="100%" stop-color="#008F4C"/>
+    </linearGradient>
+
+    <!-- Cyan Electric Gradient -->
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Gold Accent -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+
+    <!-- Outer Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Inner Soft Shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- App Icon Squircle Background -->
+  <rect x="4" y="4" width="112" height="112" rx="28" fill="url(#bgGrad)" stroke="url(#neonGreen)" stroke-width="2" filter="url(#softShadow)"/>
+
+  <!-- Subtle Radial Inner Highlight -->
+  <circle cx="60" cy="40" r="45" fill="#00FFA3" opacity="0.08"/>
+
+  <!-- Modern Football Crest / Shield Outline -->
+  <path d="M60 18 L86 28 C86 54 75 78 60 96 C45 78 34 54 34 28 Z" 
+        fill="#121b27" 
+        stroke="url(#neonGreen)" 
+        stroke-width="2.5" 
+        stroke-linejoin="round"
+        filter="url(#glow)"/>
+
+  <!-- Geometric Soccer Ball Center -->
+  <g transform="translate(60, 52) scale(0.95)" filter="url(#softShadow)">
+    <!-- Ball Core Circle -->
+    <circle cx="0" cy="0" r="22" fill="#1b2533" stroke="#2a394d" stroke-width="1.5"/>
+
+    <!-- Central Pentagon -->
+    <polygon points="0,-8 7.6,-2.5 4.7,6.5 -4.7,6.5 -7.6,-2.5" fill="url(#neonGreen)"/>
+
+    <!-- Seam Lines radiating out -->
+    <line x1="0" y1="-8" x2="0" y2="-22" stroke="#475569" stroke-width="1.8"/>
+    <line x1="7.6" y1="-2.5" x2="20" y2="-7" stroke="#475569" stroke-width="1.8"/>
+    <line x1="4.7" y1="6.5" x2="13" y2="18" stroke="#475569" stroke-width="1.8"/>
+    <line x1="-4.7" y1="6.5" x2="-13" y2="18" stroke="#475569" stroke-width="1.8"/>
+    <line x1="-7.6" y1="-2.5" x2="-20" y2="-7" stroke="#475569" stroke-width="1.8"/>
+
+    <!-- Peripheral Hex/Patch Accents -->
+    <polygon points="0,-22 8,-18 13,-22" fill="#2d3f55" opacity="0.8"/>
+    <polygon points="20,-7 22,2 17,7" fill="#2d3f55" opacity="0.8"/>
+    <polygon points="-20,-7 -22,2 -17,7" fill="#2d3f55" opacity="0.8"/>
+  </g>
+
+  <!-- Dynamic Flying Swoosh / Speed Goal Arc -->
+  <path d="M26 76 Q60 102 96 46" 
+        fill="none" 
+        stroke="url(#cyanGlow)" 
+        stroke-width="3.5" 
+        stroke-linecap="round" 
+        filter="url(#glow)"/>
+
+  <!-- Goal Star / Sparkle Accent -->
+  <g transform="translate(95, 44)">
+    <polygon points="0,-7 2,-2 7,0 2,2 0,7 -2,2 -7,0 -2,-2" fill="url(#goldAccent)"/>
+    <circle cx="0" cy="0" r="1.5" fill="#fff"/>
+  </g>
+</svg>

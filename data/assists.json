@@ -1,0 +1,466 @@
+{
+  "EPL": [
+    {
+      "rank": 1,
+      "name": "Bukayo Saka",
+      "club": "Arsenal",
+      "assists": 7,
+      "xa": 6.2,
+      "chances": 27
+    },
+    {
+      "rank": 2,
+      "name": "Mohamed Salah",
+      "club": "Liverpool",
+      "assists": 6,
+      "xa": 5.4,
+      "chances": 23
+    },
+    {
+      "rank": 3,
+      "name": "Cole Palmer",
+      "club": "Chelsea",
+      "assists": 5,
+      "xa": 5.1,
+      "chances": 26
+    },
+    {
+      "rank": 4,
+      "name": "James Maddison",
+      "club": "Tottenham",
+      "assists": 4,
+      "xa": 4.2,
+      "chances": 22
+    }
+  ],
+  "La Liga": [
+    {
+      "rank": 1,
+      "name": "Lamine Yamal",
+      "club": "Barcelona",
+      "assists": 7,
+      "xa": 6.9,
+      "chances": 31
+    },
+    {
+      "rank": 2,
+      "name": "Raphinha",
+      "club": "Barcelona",
+      "assists": 6,
+      "xa": 5.8,
+      "chances": 28
+    },
+    {
+      "rank": 3,
+      "name": "Álex Baena",
+      "club": "Villarreal",
+      "assists": 5,
+      "xa": 4.9,
+      "chances": 25
+    },
+    {
+      "rank": 4,
+      "name": "Vinícius Jr",
+      "club": "Real Madrid",
+      "assists": 4,
+      "xa": 4.6,
+      "chances": 24
+    }
+  ],
+  "Serie A": [
+    {
+      "rank": 1,
+      "name": "Nuno Tavares",
+      "club": "Lazio",
+      "assists": 8,
+      "xa": 6.2,
+      "chances": 28
+    },
+    {
+      "rank": 2,
+      "name": "Ademola Lookman",
+      "club": "Atalanta",
+      "assists": 4,
+      "xa": 4.1,
+      "chances": 22
+    },
+    {
+      "rank": 3,
+      "name": "Federico Dimarco",
+      "club": "Inter Milan",
+      "assists": 3,
+      "xa": 3.9,
+      "chances": 24
+    }
+  ],
+  "Bundesliga": [
+    {
+      "rank": 1,
+      "name": "Omar Marmoush",
+      "club": "Eintracht Frankfurt",
+      "assists": 7,
+      "xa": 6.2,
+      "chances": 26
+    },
+    {
+      "rank": 2,
+      "name": "Harry Kane",
+      "club": "Bayern Munich",
+      "assists": 5,
+      "xa": 4.9,
+      "chances": 20
+    },
+    {
+      "rank": 3,
+      "name": "Florian Wirtz",
+      "club": "Bayer Leverkusen",
+      "assists": 5,
+      "xa": 5.1,
+      "chances": 28
+    }
+  ],
+  "Ligue 1": [
+    {
+      "rank": 1,
+      "name": "Ousmane Dembélé",
+      "club": "Paris Saint-Germain",
+      "assists": 5,
+      "xa": 4.8,
+      "chances": 22
+    },
+    {
+      "rank": 2,
+      "name": "João Neves",
+      "club": "Paris Saint-Germain",
+      "assists": 6,
+      "xa": 5.1,
+      "chances": 24
+    }
+  ],
+  "Superliga": [
+    {
+      "rank": 1,
+      "name": "Abbosbek Fayzullayev",
+      "club": "O'zbekiston",
+      "assists": 5,
+      "xa": 4.8,
+      "chances": 21
+    },
+    {
+      "rank": 2,
+      "name": "Lyupcho Doriev",
+      "club": "So'g'diyona",
+      "assists": 5,
+      "xa": 4.1,
+      "chances": 19
+    },
+    {
+      "rank": 3,
+      "name": "Oybek Bozorov",
+      "club": "Nasaf",
+      "assists": 5,
+      "xa": 4,
+      "chances": 18
+    }
+  ],
+  "UCL": [
+    {
+      "rank": 1,
+      "name": "Raphinha",
+      "club": "Barcelona",
+      "assists": 3,
+      "xa": 3.2,
+      "chances": 14
+    },
+    {
+      "rank": 2,
+      "name": "Vinícius Jr",
+      "club": "Real Madrid",
+      "assists": 3,
+      "xa": 2.9,
+      "chances": 13
+    },
+    {
+      "rank": 3,
+      "name": "Mohamed Salah",
+      "club": "Liverpool",
+      "assists": 4,
+      "xa": 3.5,
+      "chances": 15
+    }
+  ],
+  "World Cup": [
+    {
+      "rank": 1,
+      "name": "Abbosbek Fayzullayev",
+      "club": "O'zbekiston",
+      "assists": 4,
+      "xa": 3.8,
+      "chances": 16
+    },
+    {
+      "rank": 2,
+      "name": "Mehdi Taremi",
+      "club": "Eron",
+      "assists": 4,
+      "xa": 3.2,
+      "chances": 14
+    },
+    {
+      "rank": 3,
+      "name": "Lionel Messi",
+      "club": "Argentina",
+      "assists": 4,
+      "xa": 4.1,
+      "chances": 19
+    }
+  ],
+  "Liga Portugal": [
+    {
+      "rank": 1,
+      "name": "Francisco Trincão",
+      "club": "Sporting CP",
+      "assists": 7,
+      "xa": 6.4,
+      "chances": 29
+    },
+    {
+      "rank": 2,
+      "name": "Pedro Gonçalves",
+      "club": "Sporting CP",
+      "assists": 4,
+      "xa": 4.2,
+      "chances": 21
+    },
+    {
+      "rank": 3,
+      "name": "Orkun Kökçü",
+      "club": "Benfica",
+      "assists": 4,
+      "xa": 3.8,
+      "chances": 20
+    }
+  ],
+  "Eredivisie": [
+    {
+      "rank": 1,
+      "name": "Joey Veerman",
+      "club": "PSV Eindhoven",
+      "assists": 5,
+      "xa": 5.1,
+      "chances": 24
+    },
+    {
+      "rank": 2,
+      "name": "Quinten Timber",
+      "club": "Feyenoord",
+      "assists": 4,
+      "xa": 3.8,
+      "chances": 18
+    }
+  ],
+  "SPL": [
+    {
+      "rank": 1,
+      "name": "Moussa Diaby",
+      "club": "Al-Ittihad",
+      "assists": 10,
+      "xa": 8.5,
+      "chances": 34
+    },
+    {
+      "rank": 2,
+      "name": "Rúben Neves",
+      "club": "Al-Hilal",
+      "assists": 6,
+      "xa": 5.5,
+      "chances": 24
+    },
+    {
+      "rank": 3,
+      "name": "Sadio Mané",
+      "club": "Al-Nassr",
+      "assists": 5,
+      "xa": 4.6,
+      "chances": 20
+    }
+  ],
+  "Süper Lig": [
+    {
+      "rank": 1,
+      "name": "Dušan Tadić",
+      "club": "Fenerbahçe",
+      "assists": 5,
+      "xa": 4.8,
+      "chances": 24
+    },
+    {
+      "rank": 2,
+      "name": "Gabriel Sara",
+      "club": "Galatasaray",
+      "assists": 5,
+      "xa": 4.5,
+      "chances": 22
+    }
+  ],
+  "Brasileirão": [
+    {
+      "rank": 1,
+      "name": "Rodrigo Garro",
+      "club": "Corinthians",
+      "assists": 8,
+      "xa": 7.9,
+      "chances": 35
+    },
+    {
+      "rank": 2,
+      "name": "Estêvão",
+      "club": "Palmeiras",
+      "assists": 8,
+      "xa": 7.2,
+      "chances": 31
+    }
+  ],
+  "Liga Profesional": [
+    {
+      "rank": 1,
+      "name": "Claudio Aquino",
+      "club": "Vélez Sarsfield",
+      "assists": 6,
+      "xa": 5.8,
+      "chances": 26
+    },
+    {
+      "rank": 2,
+      "name": "Marcelino Moreno",
+      "club": "Lanús",
+      "assists": 5,
+      "xa": 4.6,
+      "chances": 22
+    }
+  ],
+  "MLS": [
+    {
+      "rank": 1,
+      "name": "Luciano Acosta",
+      "club": "FC Cincinnati",
+      "assists": 19,
+      "xa": 16.5,
+      "chances": 62
+    },
+    {
+      "rank": 2,
+      "name": "Evander",
+      "club": "Portland Timbers",
+      "assists": 19,
+      "xa": 15.9,
+      "chances": 58
+    },
+    {
+      "rank": 3,
+      "name": "Lionel Messi",
+      "club": "Inter Miami",
+      "assists": 16,
+      "xa": 14.8,
+      "chances": 52
+    }
+  ],
+  "ACL": [
+    {
+      "rank": 1,
+      "name": "Malcom",
+      "club": "Al-Hilal",
+      "assists": 4,
+      "xa": 3.8,
+      "chances": 16
+    },
+    {
+      "rank": 2,
+      "name": "Riyad Mahrez",
+      "club": "Al-Ahli Saudi",
+      "assists": 4,
+      "xa": 3.5,
+      "chances": 18
+    },
+    {
+      "rank": 3,
+      "name": "Jaloliddin Masharipov",
+      "club": "Esteghlal",
+      "assists": 3,
+      "xa": 2.8,
+      "chances": 12
+    }
+  ],
+  "UEL": [
+    {
+      "rank": 1,
+      "name": "Dušan Tadić",
+      "club": "Fenerbahçe",
+      "assists": 4,
+      "xa": 3.8,
+      "chances": 17
+    },
+    {
+      "rank": 2,
+      "name": "Rayan Cherki",
+      "club": "Lyon",
+      "assists": 3,
+      "xa": 2.9,
+      "chances": 14
+    }
+  ],
+  "Belgian Pro": [
+    {
+      "rank": 1,
+      "name": "Jarne Steuckers",
+      "club": "KRC Genk",
+      "assists": 5,
+      "xa": 4.8,
+      "chances": 21
+    },
+    {
+      "rank": 2,
+      "name": "Vincent Janssen",
+      "club": "Royal Antwerp",
+      "assists": 5,
+      "xa": 4.2,
+      "chances": 18
+    }
+  ],
+  "Scottish Prem": [
+    {
+      "rank": 1,
+      "name": "Nicolas Kühn",
+      "club": "Celtic",
+      "assists": 6,
+      "xa": 5.4,
+      "chances": 23
+    },
+    {
+      "rank": 2,
+      "name": "James Forrest",
+      "club": "Celtic",
+      "assists": 4,
+      "xa": 3.6,
+      "chances": 16
+    }
+  ],
+  "Championship": [
+    {
+      "rank": 1,
+      "name": "Tom Fellows",
+      "club": "West Bromwich Albion",
+      "assists": 5,
+      "xa": 4.9,
+      "chances": 24
+    },
+    {
+      "rank": 2,
+      "name": "Finn Azaz",
+      "club": "Middlesbrough",
+      "assists": 4,
+      "xa": 4.1,
+      "chances": 22
+    }
+  ]
+}

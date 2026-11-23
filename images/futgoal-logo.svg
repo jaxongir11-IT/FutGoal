@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <!-- Background / Shield Gradients -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141f2e"/>
+      <stop offset="100%" stop-color="#0a1017"/>
+    </linearGradient>
+
+    <linearGradient id="brandGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00FFA3"/>
+      <stop offset="100%" stop-color="#00A859"/>
+    </linearGradient>
+
+    <linearGradient id="cyanArc" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="logoGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Left Icon Emblem (Center at x=40, y=40) -->
+  <g transform="translate(4, 4)">
+    <!-- Shield / App Icon Squircle -->
+    <rect x="2" y="2" width="68" height="68" rx="18" fill="url(#shieldGrad)" stroke="url(#brandGreen)" stroke-width="1.8"/>
+
+    <!-- Ball Inner -->
+    <g transform="translate(36, 36) scale(0.68)">
+      <!-- Ball Core -->
+      <circle cx="0" cy="0" r="22" fill="#1b2533" stroke="#2a394d" stroke-width="1.5"/>
+      <polygon points="0,-8 7.6,-2.5 4.7,6.5 -4.7,6.5 -7.6,-2.5" fill="url(#brandGreen)"/>
+      <line x1="0" y1="-8" x2="0" y2="-22" stroke="#475569" stroke-width="2"/>
+      <line x1="7.6" y1="-2.5" x2="20" y2="-7" stroke="#475569" stroke-width="2"/>
+      <line x1="4.7" y1="6.5" x2="13" y2="18" stroke="#475569" stroke-width="2"/>
+      <line x1="-4.7" y1="6.5" x2="-13" y2="18" stroke="#475569" stroke-width="2"/>
+      <line x1="-7.6" y1="-2.5" x2="-20" y2="-7" stroke="#475569" stroke-width="2"/>
+    </g>
+
+    <!-- Swoosh Arc -->
+    <path d="M14 50 Q36 68 58 28" fill="none" stroke="url(#cyanArc)" stroke-width="2.5" stroke-linecap="round" filter="url(#logoGlow)"/>
+    <circle cx="58" cy="28" r="2" fill="#FCD34D"/>
+  </g>
+
+  <!-- Wordmark Text: FutGoal -->
+  <g transform="translate(86, 48)">
+    <text font-family="'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="34" letter-spacing="-0.8">
+      <tspan fill="#FFFFFF">Fut</tspan><tspan fill="url(#brandGreen)">Goal</tspan>
+    </text>
+  </g>
+
+  <!-- LIVE Pulse Badge -->
+  <g transform="translate(228, 25)">
+    <rect x="0" y="0" width="46" height="18" rx="9" fill="#dc2626" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+    <circle cx="9" cy="9" r="3" fill="#ef4444"/>
+    <text x="16" y="12.5" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800" fill="#f87171" letter-spacing="0.5">LIVE</text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="88" y="65" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="700" fill="#64748b" letter-spacing="1.2">SCORES &amp; xG STATS</text>
+</svg>
