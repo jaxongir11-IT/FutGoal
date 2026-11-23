@@ -167,6 +167,15 @@
       transform: scale(0.98);
       transition: transform 0.05s ease;
     }
+    /* Pastki mobil navigatsiyani kompyuter (desktop) versiyasida butunlay yashirish */
+    @media (min-width: 768px) {
+      #mobileBottomNav {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    }
   </style>
 
 </head>
@@ -1110,8 +1119,8 @@
 
   </div>
 
-  <!-- ================= MOBILE & TABLET BOTTOM FLOATING NAVIGATION (5 TABS CENTERED) ================= -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 pointer-events-none pb-2 sm:pb-3 px-3">
+  <!-- ================= MOBILE ONLY BOTTOM FLOATING NAVIGATION (DESKTOPDA BUTUNLAY YASHIRILGAN) ================= -->
+  <nav id="mobileBottomNav" class="md:hidden lg:hidden xl:hidden fixed bottom-0 left-0 right-0 z-50 pointer-events-none pb-2 sm:pb-3 px-3">
     <div class="max-w-md mx-auto pointer-events-auto bg-fotmob-darkSurface/95 backdrop-blur-xl border border-fotmob-darkBorder/90 rounded-2xl shadow-2xl py-2 px-2 flex items-center justify-around ring-1 ring-slate-800">
       <button onclick="switchView('matches')" class="mobile-nav-btn active flex flex-col items-center justify-center gap-1 text-fotmob-green py-1 px-2.5 transition min-w-[54px]" data-view="matches">
         <i class="fa-solid fa-calendar-days text-base sm:text-lg"></i>
