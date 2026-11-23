@@ -778,14 +778,17 @@
             </div>
           </div>
 
-          <!-- Top 20 League Horizontal Selector Tabs -->
-          <div class="space-y-1.5">
+          <!-- Top 20 League Selector Grid (To'rtburchak kartochkalar, 3 qator) -->
+          <div class="space-y-2">
             <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center justify-between">
-              <span>Liganing tanlang:</span>
-              <span class="text-[10px] font-mono text-fotmob-muted">20 ta Liga</span>
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-shapes text-fotmob-green"></i>
+                <span>Ligani tanlang (Barcha 20 ta liga):</span>
+              </span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-fotmob-darkCard border border-fotmob-darkBorder text-fotmob-green font-bold">20 TA LIGA</span>
             </div>
-            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 scroll-smooth touch-pan-x flex-nowrap" id="leaguesHorizontalBar">
-              <!-- Rendered via JS -->
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 sm:gap-2.5" id="leaguesHorizontalBar">
+              <!-- Rendered via JS: To'rtburchak kartochkalar original logotiplar bilan -->
             </div>
           </div>
 
@@ -4204,6 +4207,29 @@
     let currentSelectedLeague = 'Superliga';
     let currentLeagueSubTab = 'table';
 
+    const LEAGUE_LOGOS = {
+      "EPL": "images/leagues/epl.png",
+      "La Liga": "images/leagues/la_liga.png",
+      "Serie A": "images/leagues/serie_a.png",
+      "Bundesliga": "images/leagues/bundesliga.png",
+      "Ligue 1": "images/leagues/ligue_1.png",
+      "Superliga": "images/leagues/superliga.png",
+      "UCL": "images/leagues/ucl.png",
+      "World Cup": "images/leagues/world_cup.png",
+      "Liga Portugal": "images/leagues/liga_portugal.png",
+      "Eredivisie": "images/leagues/eredivisie.png",
+      "SPL": "images/leagues/spl.png",
+      "Süper Lig": "images/leagues/super_lig.png",
+      "Brasileirão": "images/leagues/brasileirao.png",
+      "Liga Profesional": "images/leagues/liga_profesional.png",
+      "MLS": "images/leagues/mls.png",
+      "ACL": "images/leagues/acl.svg",
+      "UEL": "images/leagues/uel.png",
+      "Belgian Pro": "images/leagues/belgian_pro.png",
+      "Scottish Prem": "images/leagues/scottish_prem.png",
+      "Championship": "images/leagues/championship.png"
+    };
+
     function initLeaguesModule() {
       renderSidebarTop20Leagues();
       renderLeaguesHorizontalBar();
@@ -4220,6 +4246,7 @@
         if (!l) return;
         const leader = (l.table && l.table[0]) ? l.table[0] : null;
         const leaderText = leader ? `${leader.team} ${leader.pts}p` : code;
+        const logo = LEAGUE_LOGOS[code] || '';
 
         const item = document.createElement('div');
         item.onclick = () => {
@@ -4230,8 +4257,10 @@
         };
         item.className = "flex items-center justify-between p-2 rounded-lg hover:bg-fotmob-darkSurface cursor-pointer transition text-slate-200 group";
         item.innerHTML = `
-          <div class="flex items-center gap-2 min-w-0">
-            <span class="text-sm shrink-0">${l.flag || '🏆'}</span>
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="w-5 h-5 rounded bg-fotmob-darkBg/90 p-0.5 border border-fotmob-darkBorder/70 flex items-center justify-center shrink-0">
+              <img src="${logo}" alt="${l.name}" class="w-full h-full object-contain" onerror="this.outerHTML='<span>${l.flag || '🏆'}</span>'">
+            </div>
             <span class="font-semibold text-white group-hover:text-fotmob-green transition truncate text-xs">${l.name}</span>
           </div>
           <span class="text-[10px] font-mono text-fotmob-green font-bold shrink-0 ml-1.5">${leaderText}</span>
@@ -4249,23 +4278,31 @@
         const l = STANDINGS_DB[code];
         if (!l) return;
         const isActive = (code === currentSelectedLeague);
+        const logo = LEAGUE_LOGOS[code] || '';
 
-        const btn = document.createElement('button');
-        btn.onclick = () => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.onclick = () => {
           currentSelectedLeague = code;
           renderLeaguesHorizontalBar();
           renderActiveLeagueView();
         };
-        btn.className = `px-3 py-1.5 rounded-lg text-xs font-bold transition shrink-0 whitespace-nowrap flex items-center gap-1.5 cursor-pointer ${
+        card.className = `relative p-2.5 sm:p-3 rounded-xl border text-center flex flex-col items-center justify-between gap-1.5 transition-all duration-200 cursor-pointer group ${
           isActive 
-            ? 'bg-fotmob-green text-white shadow-sm border border-fotmob-green' 
-            : 'bg-fotmob-darkSurface text-slate-300 hover:text-white border border-fotmob-darkBorder'
+            ? 'bg-gradient-to-b from-fotmob-green/20 via-fotmob-darkCard to-fotmob-darkSurface border-fotmob-green text-white shadow-lg ring-1 ring-fotmob-green' 
+            : 'bg-fotmob-darkCard/90 hover:bg-fotmob-darkSurface border-fotmob-darkBorder text-slate-300 hover:text-white hover:border-slate-600'
         }`;
-        btn.innerHTML = `
-          <span>${l.flag || '🏆'}</span>
-          <span>${l.name}</span>
+        card.innerHTML = `
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-slate-900/90 p-1.5 border border-fotmob-darkBorder/80 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
+            <img src="${logo}" alt="${l.name}" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-xl\\'>${l.flag || '🏆'}</span>'">
+          </div>
+          <div class="w-full min-w-0">
+            <div class="text-[11px] sm:text-xs font-bold leading-tight truncate ${isActive ? 'text-white' : 'text-slate-200 group-hover:text-fotmob-green'}">${l.name}</div>
+            <div class="text-[9px] text-fotmob-muted truncate mt-0.5">${l.country}</div>
+          </div>
+          ${isActive ? '<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-fotmob-green shadow-[0_0_8px_#00c853]"></span>' : ''}
         `;
-        bar.appendChild(btn);
+        bar.appendChild(card);
       });
     }
 
@@ -4291,22 +4328,27 @@
       const banner = document.getElementById('activeLeagueBanner');
       if (banner) {
         const leader = (l.table && l.table[0]) ? l.table[0] : null;
+        const logo = LEAGUE_LOGOS[currentSelectedLeague] || '';
         banner.innerHTML = `
-          <div class="flex items-center gap-3 min-w-0">
-            <span class="text-3xl p-2 rounded-xl bg-fotmob-darkCard border border-fotmob-darkBorder shrink-0">${l.flag || '🏆'}</span>
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-fotmob-darkCard p-2 border border-fotmob-darkBorder/90 shrink-0 flex items-center justify-center shadow-md">
+              <img src="${logo}" alt="${l.name}" class="w-full h-full object-contain" onerror="this.outerHTML='<span class=\\'text-3xl\\'>${l.flag || '🏆'}</span>'">
+            </div>
             <div class="min-w-0">
-              <h2 class="text-base sm:text-lg font-black text-white truncate">${l.name}</h2>
-              <div class="text-xs text-fotmob-muted flex items-center gap-2 mt-0.5 flex-wrap">
-                <span class="text-slate-300 font-medium">${l.country}</span>
-                <span>•</span>
+              <h2 class="text-base sm:text-xl font-black text-white truncate flex items-center gap-2">
+                <span>${l.name}</span>
+                <span class="text-xs px-2 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 font-normal">${l.country}</span>
+              </h2>
+              <div class="text-xs text-fotmob-muted flex items-center gap-2 mt-1 flex-wrap">
                 <span class="font-mono text-fotmob-green font-bold">Mavsum: ${l.season}</span>
                 <span>•</span>
                 <span class="text-slate-400 font-mono">${l.table ? l.table.length : 0} jamoa</span>
+                ${leader ? `<span>•</span><span class="text-amber-400 font-semibold flex items-center gap-1"><i class="fa-solid fa-crown text-[10px]"></i> 1-o'rin: ${leader.team} (${leader.pts}p)</span>` : ''}
               </div>
             </div>
           </div>
           <div class="flex items-center gap-2 shrink-0">
-            <button onclick="filterLeagueFromSidebar('${currentSelectedLeague}')" class="px-3 py-1.5 rounded-lg bg-fotmob-darkCard hover:bg-slate-800 border border-fotmob-darkBorder text-slate-200 hover:text-white text-xs font-bold transition flex items-center gap-1.5">
+            <button onclick="filterLeagueFromSidebar('${currentSelectedLeague}')" class="px-3.5 py-2 rounded-lg bg-fotmob-darkCard hover:bg-slate-800 border border-fotmob-darkBorder text-slate-200 hover:text-white text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
               <i class="fa-solid fa-calendar-days text-fotmob-green"></i>
               <span>O'yinlarni ko'rish</span>
             </button>
